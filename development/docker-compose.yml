@@ -1,0 +1,23 @@
+# tor proxies to not get banned from google news. Multitool container is just for network debugging - contains various tools like curl, pcap etc.
+
+version: '3'
+
+services:
+  tor-1:
+    container_name: 'tor-1'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9990:8888'
+    environment:
+      - IP_CHANGE_SECONDS=20
+    restart: always
+  tor-2:
+    container_name: 'tor-2'
+    image: 'pickapp/tor-proxy:latest'
+    ports:
+      - '9991:8888'
+    environment:
+      - IP_CHANGE_SECONDS=20
+    restart: always
+  multitool:
+    image: praqma/network-multitool

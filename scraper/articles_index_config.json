@@ -1,0 +1,69 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 6,  
+            "number_of_replicas": 2 
+        },
+        "analysis":{
+            "analyzer":{
+                "english_stop_analyzer":{ 
+                    "type":"custom",
+                    "tokenizer":"standard",
+                    "filter":[
+                        "lowercase"
+                    ]
+                }
+        },
+        "filter":{}
+        }
+    },
+    "mappings": {
+        "_source": {
+            "enabled": false
+        },
+        "properties": {
+            "html": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "published": {
+                "type": "date",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "link": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "region": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "language": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "keywords": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            },
+            "title": {
+                "type": "text",
+                "store": false,
+                "analyzer": "english_stop_analyzer",
+                "search_analyzer": "english_stop_analyzer"
+            }
+        }
+    }
+}

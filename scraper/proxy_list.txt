@@ -1,0 +1,10 @@
+http://tor-1:8888
+http://tor-2:8888
+http://tor-3:8888
+http://tor-4:8888
+http://tor-5:8888
+http://tor-6:8888
+http://tor-7:8888
+http://tor-8:8888
+http://tor-9:8888
+http://tor-10:8888

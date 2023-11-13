@@ -4,7 +4,9 @@
   * python -m venv .\venv
   * .\venv\Scripts\activate
   * pip install -r requirements.txt
-  * cd .\scraper
+  * cd .\development
+  * docker-compose up -d
+  * cd ..\scraper
   * scrapy scrawl news_spider <ARGUMENTS>
  
  arguments:
